@@ -1,0 +1,26 @@
+\begin {longtable}{@{}|l|l|>{\hsize =\vhAuthorColWidth }X|>{\hsize =\vhChangeColWidth }X|@{}}\hline 
+\textbf {\vhversionname }
+ & \textbf {\vhdatename }
+ & \textbf {\vhauthorname }
+ & \textbf {\vhchangename }\\\hline 
+0.1
+ & 06.25.2018
+ & \listset {MD}
+ & Document Creation\\\hline 
+0.2
+ & 06.27.2018
+ & \listset {PD}
+ & Document Updated\\\hline 
+0.3
+ & 07.05.2018
+ & \listset {PD MD VT RV EM}
+ & Document Updated\\\hline 
+0.4
+ & 07.19.2018
+ & \listset {PD}
+ & Deleted Burndown Chart Image\\\hline 
+0.9
+ & 07.19.2018
+ & \listset {MD}
+ & Final Version\\\hline 
+\end {longtable}

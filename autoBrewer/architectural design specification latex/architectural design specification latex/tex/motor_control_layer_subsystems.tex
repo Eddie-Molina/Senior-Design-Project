@@ -1,0 +1,66 @@
+The Motor Control layer is the layer where the physical action happens. This layer will have two subsystems, the first system is Motors. The Motors sub-system will have approximately ten motors that will control, what The Brew Crew likes to call the DOOM Hopper, using a Raspberry Pi. The DOOM Hopper will be in charge of dropping the brew hops into the kettle at a specific time. The second subsystem is Error Detection. The Error Detection subsystem will be keeping track of all the motors. In other words, the subsystem will check if all the motors are moving at the programmed rate and be positioned at the correct position. 
+
+\subsection{Error Detection}
+The error detection subsystem will be powered the Brain layer, specifically, by the raspberry pi. Error detection will always be checking on the motors of the system, it will check the RPMs of the motors and fix the RPM if too slow or too fast. Error detection will also keep track of the position of the motor; with proper position of the motors the hops can be dropped correctly into the boiling kettle. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.60\textwidth]{images/MCError}
+ \caption{Error Detection Diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+We assume error detection will be controlled by the Raspberry Pi.
+
+\subsubsection{Responsibilities}
+Error detection is responsible for keeping all motors at the right RPM and in the right position.
+
+\subsubsection{Subsystem Interfaces}
+The subsystem interface is the raspberry pi from the Brain Layer.
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#01 & Detects errors & \pbox{3cm}{Raspberry Pi} & \pbox{3cm}{Sends positive or negative confirmation to Raspberry PI}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Motors}
+The motors are the moving forces of the hop system. The objective of the motors is to move the hop dispensers into positon for displacing
+the hops and specialty grains into the stainless steel kettle for boiling. The user will select a recipe from the interface layer, which 
+consist of a web page or an android application. Upon selection, only the hops in the dispensers needed for the recipe will be dumped
+into the kettle. This is important for the motor control since the user selection will determine how long the motors should run
+in order to position the right hop dispensers in front of the kettle.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.60\textwidth]{images/MCmotors}
+ \caption{Motor Control Diagram}
+\end{figure}
+
+
+\subsubsection{Assumptions}
+ The assumptions for the motor subsystem is that there will be approximately 10 motors controlling the hop containers. Also, the
+ motors will be controlled by the brain system, which consist of a raspberry pi.
+
+\subsubsection{Responsibilities}
+The motor subsystem is responsible for turning each hop container at a certain rpm. It will allow for the hops to be dumped at the right 
+position.
+
+\subsubsection{Subsystem Interfaces}
+The subsystem's interface is the raspberry pi and the timer, which come from the Brain Layer.
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#01 & Motor Control & \pbox{3cm}{Raspberry Pi} & \pbox{3cm}{Hop Dispenser Position}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+

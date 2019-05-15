@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UTA Brew Crew</title>
+	<link rel="stylesheet" type="text/css" href="StyleBrew.css">
+</head>
+<body>
+<h1 align="center">DOOM</h1>
+<h6 align="center"> <i>(Drunk Object Oriented Machine)</i> </h1>
+<center><img width ="500"src="beer_image.webp"></center>
+<h3 align="center"><a href = "Beer_Recipes.html">Brew Crew Recipes</a></h3>
+<table align="center" border ="1">
+  	<thead>
+  		<tr>
+  			<th>Type</th>
+  			<th>Time</th>
+  			<th>Style</th>
+  		</tr>
+  	</thead>
+	<tbody>
+		<tr align="center">
+			<td>OG Doom</td>
+			<td>22 Years</td>
+			<td>Bitter like crazy</td>
+		</tr>
+		<tr align="center">
+			<td>The Van Diesel</td>
+			<td>5 seconds</td>
+			<td>Too sour</td>
+		</tr>
+		<tr align="center">
+			<td>The Seke</td>
+			<td>10 centuries</td>
+			<td>Just the right bitter</td>
+		</tr>
+		<tr align="center">
+			<td>The Saucy Boi</td>
+			<td>10 years</td>
+			<td>Sweet like candy</td>
+		</tr>
+		<tr align="center">
+			<td>DJ Dang</td>
+			<td>79 picoseconds</td>
+			<td>Salty like wow</td>
+		</tr>
+		<tr align="center">
+			<td>Marco Polo</td>
+			<td>Undefined</td>
+			<td>You gonna grow some hair on your chest</td>
+		</tr>
+	</tbody>
+</table>
+
+<form>
+    <fieldset>
+        <legend>Choose your Beer style</legend>
+
+        <div>
+            <input type="radio" id="OG Doom"
+                   name="Beer" value="Og Doom" checked />
+            <label for="OG Doom">OG Doom</label>
+        </div>
+
+        <div>
+            <input type="radio" id="The Van Diesel"
+                   name="Beer" value="The Van Diesel" />
+            <label for="The Van Diesel">The Van Diesel</label>
+        </div>
+
+        <div>
+            <input type="radio" id="The Seke"
+                   name="Beer" value="The Seke" />
+            <label for="The Seke">The Seke</label>
+        </div>
+
+        <div>
+            <input type="radio" id="The Saucy Boi"
+                   name="Beer" value="The Saucy Boi" checked />
+            <label for="The Saucy Boi">The Saucy Boi</label>
+        <div>
+            <input type="radio" id="DJ Dang"
+                   name="Beer" value="DJ Dang" checked />
+            <label for="DJ Dang">DJ Dang</label>
+        <div>
+            <input type="radio" id="Marco Polo"
+                   name="Beer" value="Marco Polo" checked />
+            <label for="Marco Polo">Marco Polo</label>
+        <div>
+         	<input type="button" class="btn" value = "Start Brewing">
+         	<input type="button" class="btn" value = "STOP">
+        </div>
+    </fieldset>
+</form>
+
+<h3>Custom Recipes</h3>
+<form action = "/src/new_recipe_cgi.py" method = "post">
+	<div>
+		<label for="Recipe Name">Recipe:</label>
+		<input name="Recipe" id="Recipe Name" type="text" placeholder="Enter recipe name here" required>
+	</div>
+	<div>
+		<label for="Type of Hops1">Hops 1:</label>
+		<input name="hop_name_1" id="Type of Hops1" type="text" placeholder="Enter Hops type here" required>
+		<label for="Type of Hops2">Hops 2:</label>
+		<input name="hop_name_2" id="Type of Hops2" type="text" placeholder="Enter 2nd Hops" required>
+		<label for="Type of Hops3">Hops 3:</label>
+		<input name="hop_name_3" id="Type of Hops3" type="text" placeholder="Enter 3rd Hops" required>
+		<label for="Type of Hops4">Hops 4:</label>
+		<input name="hop_name_4" id="Type of Hops4" type="text" placeholder="Enter 4th Hops" required>
+		<label for="Type of Hops5">Hops 5:</label>
+		<input name="hop_name_5" id="Type of Hops5" type="text" placeholder="Enter 5th Hops" required>
+		<label for="Type of Hops6">Hops 6:</label>
+		<input name="hop_name_6" id="Type of Hops6" type="text" placeholder="Enter 6th Hops" required>
+	</div>
+	<div>
+		<label for="Type of Time1">Time 1:</label>
+		<input name="hop_time_1" id="Type of Time1" type="text" placeholder="Enter Time in minutes" required>
+		<label for="Type of Time2">Time 2:</label>
+		<input name="hop_time_2" id="Type of Time2" type="text" placeholder="Enter 2nd Time" required>
+		<label for="Type of Time3">Time 3:</label>
+		<input name="hop_time_3" id="Type of Time3" type="text" placeholder="Enter 3rd Time" required>
+		<label for="Type of Time4">Time 4:</label>
+		<input name="hop_time_4" id="Type of Time4" type="text" placeholder="Enter 4th Time" required>
+		<label for="Type of Time5">Time 5:</label>
+		<input name="hop_time_5" id="Type of Time5" type="text" placeholder="Enter 5th Time" required>
+		<label for="Type of Time6">Time 6:</label>
+		<input name="hop_time_6" id="Type of Time6" type="text" placeholder="Enter 6th Time" required>
+	</div>
+	<div>
+		<p>Style Description:</p>
+		<textarea name="textdescription" rows="3" cols="30" placeholder="Enter general description like bitter,sour etc."></textarea>
+	</div>
+	<div>
+		<label for="Temperature">Temperature:</label>
+		<input name="temperature" id="Temperature" type="text" placeholder="Enter in celsius" required>
+	</div>
+	<div>
+        <input type = "submit" value = "Submit" />
+	</div>
+</form>
+
+
+
+</body>
+</html>

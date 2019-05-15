@@ -1,0 +1,29 @@
+The Motor Control layer will be using 5 12V 66RPM DC motors.The motor will be powered up by 65W 110V AC to 12V DC 5.42A power supply. We will be using an IRF610 Power MOSFET as a switch, when Raspberry Pi gives off 3.3V to the switch, the MOSFET will activate which will power supply.
+
+\subsection{Layer Hardware}
+The Raspberry Pi 3 
+
+\subsection{Motor Control}
+This subsystem is a piece of hardware. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.60\textwidth]{images/MCError}
+ \caption{Error Detection Diagram}
+\end{figure}
+
+\subsubsection{Subsystem Hardware}
+The subsystem will require 12V 66RPM DC motors, IRF610 Power MOSFET, and  a 65W 110V AC to 12V DC 5.42A power supply. 
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#01 & Detects errors & \pbox{3cm}{Raspberry Pi} & \pbox{3cm}{Sends positive or negative confirmation to Raspberry PI}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+

@@ -1,0 +1,19 @@
+The Brain Layer will serve as the top-level layer as to which it controls the machine. The way the Brain Layer interacts with the user is through the Interface layer where it asks them which recipe to choose upon. Once chosen, the information will go back to the Brain Layer and send signals to the Motor Control Layer and proceed with dumping hops at the correct time period. Once an objective is completed in the Motor Control Layer, it will send a completion message to the Brain Layer and proceed with the next step in the process until completion. A Misc. Systems Layer was also added where it provides  a list of necessary products outside of the machine in order for the machine to operate.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/layers}
+ \caption{A simple architectural layer diagram}
+\end{figure}
+
+\subsection{Brain Layer}
+The Brain Layer operates as the systems command functionality in which it sends messages through the system for it to complete an objective. Two subsystems that are used for this layer is the Raspberry Pi and a Timer. Once turned on, the Brain Layer should send recipes to the Interface to choose upon and waits for a user response. Once chosen, a Timer will start and the Raspberry Pi will follow each objective in the recipe and send signals to the Motor Control.
+
+\subsection{Interface Layer}
+Prior to the operation of the Interface Layer, recipes should already be installed in the Brain Layer. The Interface Layer will have two subsystems, the Android App and the Webpage. In the beginning of operation, the Brain Layer will send a list of recipes to the Android App. When the Android App is running, the user should be able to select upon a list of recipes obtained from the Brain Layer. Once chosen, the interface will send the recipe selection to the Brain Layer to work with. Once the timer is started, a webpage from the interface should display the cumulative time of the entire process.
+
+\subsection{Motor Control Layer}
+The Motor Control Layers objective is to physically do the objective given from the Brain Layer. The Motor Control Layer has four subsystems, Error Detection, Motors, Pulley, and Clips. From the Raspberry Pi, a specific motor set should be chosen to work with for the specific objective. The motor should run with a pulley transferring a string with hops down into the kettle. Once the objective is completed, the motors will go in reverse and take the hops away from the kettle. When that is completed, the motor control will check if there was any error detection. If not, then the layer will send a message to the Raspberry Pi saying that the objective was completed and is available for the next one.
+
+\subsection{Misc. Systems Layer}
+The Misc. Systems Layer are objects required for the project for the machine to work around with. There are three subsystems, the Kettle, Drip tray, and stand. The Kettle will be where the brewing takes place. The Drip tray is for finished hops being taken out for cleanliness. The stand is for display purposes of the machine.

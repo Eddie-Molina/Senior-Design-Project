@@ -1,0 +1,63 @@
+The interface layer will serve as the software structure of the brewing system. It will act similar to a menu for the user to choose their recipe through the android app and will connect to a server from the raspberry pi or a webpage, possibly both.
+
+\subsection{Android App}
+The Android App will communicate with the raspberry pi to basically provide an interface for the user to utilize the hop machine.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/INTapp}
+ \caption{Example subsystem description diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+The android app will provide recipes to choose from and communicate with the brain.
+
+\subsubsection{Responsibilities}
+The android app should have a menu like interface for the user to be able to easily understand and use. The app should be in sync with the brain at all times.
+
+\subsubsection{Subsystem Interfaces}
+Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+
+\begin {table}[H]
+\caption {Subsystem interfaces}
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#01 & Start and Stop & \pbox{3cm}{User Input} & \pbox{3cm}{Signal to Pi}  \\ \hline
+		\#02 & Send recipe to the webpage & \pbox{3cm}{User Input File} & \pbox{3cm}{Parsed recipe class}  \\ \hline
+		\$03 & Receive updates from webpage & \pbox{3cm}{Status class} & \pbox{3cm}{Updated status class}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Webpage}
+It will act as the same thing as the android app and as a possible substitute. It will allow users to access the app and alternately anything connected to the internet.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/Intweb}
+ \caption{Example subsystem description diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+It basically does the same thing as the android app and will allow users to use either app other devices to access the brewing system. Will give the user more direct control over the entire system.
+
+\subsubsection{Responsibilities}
+The webpage will be a single page ran on the Raspberry Pi. This subsystem will be able to display any important information and manually control the system. The page will be split up into sections to help the user understand the system in its current state.
+
+\subsubsection{Subsystem Interfaces}
+Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+
+\begin {table}[H]
+\caption {Subsystem interfaces}
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#01 & Send signal to dispense hops & \pbox{3cm}{User input} & \pbox{3cm}{Send a command}  \\ \hline
+		\#02 & Display updates & \pbox{3cm}{Data class from Pi} & \pbox{3cm}{N/A}  \\ \hline
+		\#03 & Send new recipes to database & \pbox{3cm}{Recipe File} & \pbox{3cm}{Parsed File} \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}

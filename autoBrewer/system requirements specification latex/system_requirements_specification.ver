@@ -1,0 +1,30 @@
+\begin {longtable}{@{}|l|l|>{\hsize =\vhAuthorColWidth }X|>{\hsize =\vhChangeColWidth }X|@{}}\hline 
+\textbf {\vhversionname }
+ & \textbf {\vhdatename }
+ & \textbf {\vhauthorname }
+ & \textbf {\vhchangename }\\\hline 
+0.1
+ & 07.10.2018
+ & \listset {PD}
+ & document creation\\\hline 
+0.2
+ & 07.10.2018
+ & \listset {MD}
+ & minor edits to front page and correction of revision history. Also filled in Packaging requirements and Maintanance requirements\\\hline 
+0.3
+ & 07.19.2018
+ & \listset {MD}
+ & Added logo\\\hline 
+0.4
+ & 07.19.2018
+ & \listset {PD}
+ & Added Performance and Future Requirements\\\hline 
+0.5
+ & 07.22.2018
+ & \listset {MD}
+ & Added Customer Requirements\\\hline 
+1.0
+ & 07.24.2018
+ & \listset {MD}
+ & Conceptual drawing added.\\\hline 
+\end {longtable}

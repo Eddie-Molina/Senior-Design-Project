@@ -1,0 +1,61 @@
+The Brain layer serves as a central hub for data exchange in the device. It should be controlling when hops are added to the system and for how long they steep. It will also be responsible for taking commands from the user.
+
+\subsection{Raspberry Pi}
+This serves as the main control device for the unit. It will host the webpage and run all calculations for the device. It will also activate the motors.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/brainRasp}
+ \caption{Raspberry Pi Subsystem}
+\end{figure}
+
+\subsubsection{Assumptions}
+The assumption we are making is that the raspberry pi can securely and reliably host webpages and make calculations quickly enough for this system.
+
+\subsubsection{Responsibilities}
+The Raspeberry pi will be responsible for all server side calculations as well as the main functionality of the device out side of the user interface.
+
+\subsubsection{Subsystem Interfaces}
+Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#00 & Controls the timer & \pbox{3cm}{Timer Control} & \pbox{3cm}{output 1}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Timer}
+This subsystem is soly responsible for keeping the time. Since this is an incredibly important function for brewing we must make sure we do it correctly.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/brainTimer}
+ \caption{Timer}
+\end{figure}
+
+\subsubsection{Assumptions}
+We assume it is possible to keep accurate time.
+
+\subsubsection{Responsibilities}
+This is responsible for the timed events that must happen at certain times.
+
+\subsubsection{Subsystem Interfaces}
+
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#01 & Controls the timer & \pbox{3cm}{Signal Reception} & \pbox{3cm}{input 1}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+

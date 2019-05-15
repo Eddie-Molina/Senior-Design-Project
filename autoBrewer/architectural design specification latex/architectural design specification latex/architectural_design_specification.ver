@@ -1,0 +1,30 @@
+\begin {longtable}{@{}|l|l|>{\hsize =\vhAuthorColWidth }X|>{\hsize =\vhChangeColWidth }X|@{}}\hline 
+\textbf {\vhversionname }
+ & \textbf {\vhdatename }
+ & \textbf {\vhauthorname }
+ & \textbf {\vhchangename }\\\hline 
+0.1
+ & 10.01.2015
+ & \listset {VT}
+ & document creation\\\hline 
+0.2
+ & 08.06.2018
+ & \listset {MD}
+ & Corrected Front Page, added brain layer, updated images\\\hline 
+0.3
+ & 08.08.2018
+ & \listset {PD}
+ & Added System Overview\\\hline 
+0.4
+ & 08.09.2018
+ & \listset {RV}
+ & Added Error Detection subsystem\\\hline 
+0.5
+ & 08.09.2018
+ & \listset {EM}
+ & Added Motor control subsystem\\\hline 
+0.6
+ & 08.09.2018
+ & \listset {MP}
+ & Added Interface subsystem\\\hline 
+\end {longtable}

@@ -1,0 +1,50 @@
+body{
+	background: #b38600;
+}
+table{
+	border: 1px solid black;
+	font-size: 25px;
+}
+table tbody{
+	
+}
+fieldset{
+	border: 1px solid black;
+}
+fieldset div{
+	font-style: italic;
+	font-size:25px;
+}
+h1{
+	font-family: "Arial Black";
+	font-size: 50px;
+	margin: auto;
+}
+h6{
+	font-weight: lighter;
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+h3{
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+img{
+	border: 1px solid black;
+}
+form div{
+	font-size: 25px;
+}
+input[type="text"] {
+    width: 150px;
+}
+div p{
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+input[type="submit"] {
+    margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
